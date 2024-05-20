@@ -7,23 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF4F00042BF62C50000D361C /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DF4F00032BF62C50000D361C /* RxCocoa */; };
+		DF4F00062BF62C50000D361C /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = DF4F00052BF62C50000D361C /* RxRelay */; };
+		DF4F00082BF62C50000D361C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DF4F00072BF62C50000D361C /* RxSwift */; };
+		DF4F000B2BF62C5C000D361C /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = DF4F000A2BF62C5C000D361C /* ReactorKit */; };
 		DF4FFFEF2BF62C15000D361C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4FFFEE2BF62C15000D361C /* AppDelegate.swift */; };
 		DF4FFFF12BF62C15000D361C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4FFFF02BF62C15000D361C /* SceneDelegate.swift */; };
-		DF4FFFF32BF62C15000D361C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4FFFF22BF62C15000D361C /* ViewController.swift */; };
-		DF4FFFF62BF62C15000D361C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DF4FFFF52BF62C15000D361C /* Base */; };
 		DF4FFFF82BF62C16000D361C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF4FFFF72BF62C16000D361C /* Assets.xcassets */; };
 		DF4FFFFB2BF62C16000D361C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DF4FFFFA2BF62C16000D361C /* Base */; };
+		DF50F6F82BF8EFCE00DDA1EC /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50F6F72BF8EFCE00DDA1EC /* AppFlow.swift */; };
+		DF50F6FA2BF8EFD500DDA1EC /* NavigationStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50F6F92BF8EFD500DDA1EC /* NavigationStep.swift */; };
+		DF50F7022BF8F22900DDA1EC /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50F7012BF8F22900DDA1EC /* AppServices.swift */; };
+		DF50F7062BF90F5000DDA1EC /* SplashReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50F7052BF90F5000DDA1EC /* SplashReactor.swift */; };
+		DF50F7082BF9112800DDA1EC /* SplashFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50F7072BF9112800DDA1EC /* SplashFlow.swift */; };
+		DF50F70C2BF914DD00DDA1EC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50F7092BF914DD00DDA1EC /* SplashViewController.swift */; };
+		DF50F7142BF9F49700DDA1EC /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = DF50F7132BF9F49700DDA1EC /* Reusable */; };
+		DF50F7172BF9FCA100DDA1EC /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = DF50F7162BF9FCA100DDA1EC /* Swinject */; };
+		DF84CDBD2BF7B093006C922C /* RxFlow in Frameworks */ = {isa = PBXBuildFile; productRef = DF84CDBC2BF7B093006C922C /* RxFlow */; };
+		DFE838D82BFB1D0F0001CF90 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE838D72BFB1D0F0001CF90 /* Storyboarded.swift */; };
+		DFE838FA2BFB266F0001CF90 /* SplashViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE838F92BFB266F0001CF90 /* SplashViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DF4FFFEB2BF62C15000D361C /* PomodoroTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomodoroTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF4FFFEE2BF62C15000D361C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF4FFFF02BF62C15000D361C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DF4FFFF22BF62C15000D361C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DF4FFFF52BF62C15000D361C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF4FFFF72BF62C16000D361C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF4FFFFA2BF62C16000D361C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DF4FFFFC2BF62C16000D361C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF4FFFFC2BF62C16000D361C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = PomodoroTimer/Supportings/Info.plist; sourceTree = SOURCE_ROOT; };
+		DF50F6F72BF8EFCE00DDA1EC /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
+		DF50F6F92BF8EFD500DDA1EC /* NavigationStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStep.swift; sourceTree = "<group>"; };
+		DF50F7012BF8F22900DDA1EC /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
+		DF50F7052BF90F5000DDA1EC /* SplashReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashReactor.swift; sourceTree = "<group>"; };
+		DF50F7072BF9112800DDA1EC /* SplashFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFlow.swift; sourceTree = "<group>"; };
+		DF50F7092BF914DD00DDA1EC /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		DFE838D72BFB1D0F0001CF90 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		DFE838F92BFB266F0001CF90 /* SplashViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +50,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF84CDBD2BF7B093006C922C /* RxFlow in Frameworks */,
+				DF4F00082BF62C50000D361C /* RxSwift in Frameworks */,
+				DF50F7172BF9FCA100DDA1EC /* Swinject in Frameworks */,
+				DF50F7142BF9F49700DDA1EC /* Reusable in Frameworks */,
+				DF4F00062BF62C50000D361C /* RxRelay in Frameworks */,
+				DF4F000B2BF62C5C000D361C /* ReactorKit in Frameworks */,
+				DF4F00042BF62C50000D361C /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +82,85 @@
 		DF4FFFED2BF62C15000D361C /* PomodoroTimer */ = {
 			isa = PBXGroup;
 			children = (
-				DF4FFFEE2BF62C15000D361C /* AppDelegate.swift */,
-				DF4FFFF02BF62C15000D361C /* SceneDelegate.swift */,
-				DF4FFFF22BF62C15000D361C /* ViewController.swift */,
-				DF4FFFF42BF62C15000D361C /* Main.storyboard */,
-				DF4FFFF72BF62C16000D361C /* Assets.xcassets */,
+				DF50F6FD2BF8F04600DDA1EC /* Application */,
+				DF50F6F62BF8EFBC00DDA1EC /* Flows */,
+				DF50F7002BF8F21E00DDA1EC /* Services */,
+				DF50F6FB2BF8F00D00DDA1EC /* Supportings */,
+				DF50F6FF2BF8F08A00DDA1EC /* UI */,
+				DFE838D62BFB1CDD0001CF90 /* Utils */,
+			);
+			path = PomodoroTimer;
+			sourceTree = "<group>";
+		};
+		DF50F6F62BF8EFBC00DDA1EC /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				DF50F6F72BF8EFCE00DDA1EC /* AppFlow.swift */,
+				DF50F7072BF9112800DDA1EC /* SplashFlow.swift */,
+				DF50F6F92BF8EFD500DDA1EC /* NavigationStep.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		DF50F6FB2BF8F00D00DDA1EC /* Supportings */ = {
+			isa = PBXGroup;
+			children = (
+				DF50F6FE2BF8F07300DDA1EC /* Resources */,
 				DF4FFFF92BF62C16000D361C /* LaunchScreen.storyboard */,
 				DF4FFFFC2BF62C16000D361C /* Info.plist */,
 			);
-			path = PomodoroTimer;
+			path = Supportings;
+			sourceTree = "<group>";
+		};
+		DF50F6FD2BF8F04600DDA1EC /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DF4FFFEE2BF62C15000D361C /* AppDelegate.swift */,
+				DF4FFFF02BF62C15000D361C /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		DF50F6FE2BF8F07300DDA1EC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DF4FFFF72BF62C16000D361C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DF50F6FF2BF8F08A00DDA1EC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DF50F7042BF90F4900DDA1EC /* Splash */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		DF50F7002BF8F21E00DDA1EC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DF50F7012BF8F22900DDA1EC /* AppServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DF50F7042BF90F4900DDA1EC /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				DF50F7052BF90F5000DDA1EC /* SplashReactor.swift */,
+				DF50F7092BF914DD00DDA1EC /* SplashViewController.swift */,
+				DFE838F92BFB266F0001CF90 /* SplashViewController.storyboard */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		DFE838D62BFB1CDD0001CF90 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DFE838D72BFB1D0F0001CF90 /* Storyboarded.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +179,15 @@
 			dependencies = (
 			);
 			name = PomodoroTimer;
+			packageProductDependencies = (
+				DF4F00032BF62C50000D361C /* RxCocoa */,
+				DF4F00052BF62C50000D361C /* RxRelay */,
+				DF4F00072BF62C50000D361C /* RxSwift */,
+				DF4F000A2BF62C5C000D361C /* ReactorKit */,
+				DF84CDBC2BF7B093006C922C /* RxFlow */,
+				DF50F7132BF9F49700DDA1EC /* Reusable */,
+				DF50F7162BF9FCA100DDA1EC /* Swinject */,
+			);
 			productName = PomodoroTimer;
 			productReference = DF4FFFEB2BF62C15000D361C /* PomodoroTimer.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +216,13 @@
 				Base,
 			);
 			mainGroup = DF4FFFE22BF62C15000D361C;
+			packageReferences = (
+				DF4F00022BF62C50000D361C /* XCRemoteSwiftPackageReference "RxSwift" */,
+				DF4F00092BF62C5C000D361C /* XCRemoteSwiftPackageReference "ReactorKit" */,
+				DF84CDBB2BF7B093006C922C /* XCRemoteSwiftPackageReference "RxFlow" */,
+				DF50F7122BF9F49700DDA1EC /* XCRemoteSwiftPackageReference "Reusable" */,
+				DF50F7152BF9FCA100DDA1EC /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = DF4FFFEC2BF62C15000D361C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,8 +238,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF4FFFF82BF62C16000D361C /* Assets.xcassets in Resources */,
+				DFE838FA2BFB266F0001CF90 /* SplashViewController.storyboard in Resources */,
 				DF4FFFFB2BF62C16000D361C /* Base in Resources */,
-				DF4FFFF62BF62C15000D361C /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,30 +250,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF4FFFF32BF62C15000D361C /* ViewController.swift in Sources */,
+				DF50F6F82BF8EFCE00DDA1EC /* AppFlow.swift in Sources */,
+				DF50F6FA2BF8EFD500DDA1EC /* NavigationStep.swift in Sources */,
+				DFE838D82BFB1D0F0001CF90 /* Storyboarded.swift in Sources */,
+				DF50F7062BF90F5000DDA1EC /* SplashReactor.swift in Sources */,
+				DF50F7082BF9112800DDA1EC /* SplashFlow.swift in Sources */,
+				DF50F7022BF8F22900DDA1EC /* AppServices.swift in Sources */,
 				DF4FFFEF2BF62C15000D361C /* AppDelegate.swift in Sources */,
 				DF4FFFF12BF62C15000D361C /* SceneDelegate.swift in Sources */,
+				DF50F70C2BF914DD00DDA1EC /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DF4FFFF42BF62C15000D361C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DF4FFFF52BF62C15000D361C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DF4FFFF92BF62C16000D361C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DF4FFFFA2BF62C16000D361C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
+			path = PomodoroTimer/Supportings;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXVariantGroup section */
 
@@ -175,12 +286,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M8R22ZKQC4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PomodoroTimer/Info.plist;
+				INFOPLIST_FILE = PomodoroTimer/Supportings/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -188,6 +299,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.conner.PomodoroTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -203,12 +317,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M8R22ZKQC4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PomodoroTimer/Info.plist;
+				INFOPLIST_FILE = PomodoroTimer/Supportings/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -216,6 +330,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.conner.PomodoroTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -363,6 +480,87 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DF4F00022BF62C50000D361C /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
+		DF4F00092BF62C5C000D361C /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactorKit/ReactorKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.0;
+			};
+		};
+		DF50F7122BF9F49700DDA1EC /* XCRemoteSwiftPackageReference "Reusable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliSoftware/Reusable.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.2;
+			};
+		};
+		DF50F7152BF9FCA100DDA1EC /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.8;
+			};
+		};
+		DF84CDBB2BF7B093006C922C /* XCRemoteSwiftPackageReference "RxFlow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxFlow.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.13.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DF4F00032BF62C50000D361C /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF4F00022BF62C50000D361C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		DF4F00052BF62C50000D361C /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF4F00022BF62C50000D361C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		DF4F00072BF62C50000D361C /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF4F00022BF62C50000D361C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		DF4F000A2BF62C5C000D361C /* ReactorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF4F00092BF62C5C000D361C /* XCRemoteSwiftPackageReference "ReactorKit" */;
+			productName = ReactorKit;
+		};
+		DF50F7132BF9F49700DDA1EC /* Reusable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF50F7122BF9F49700DDA1EC /* XCRemoteSwiftPackageReference "Reusable" */;
+			productName = Reusable;
+		};
+		DF50F7162BF9FCA100DDA1EC /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF50F7152BF9FCA100DDA1EC /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		DF84CDBC2BF7B093006C922C /* RxFlow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF84CDBB2BF7B093006C922C /* XCRemoteSwiftPackageReference "RxFlow" */;
+			productName = RxFlow;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DF4FFFE32BF62C15000D361C /* Project object */;
 }

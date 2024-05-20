@@ -6,3 +6,27 @@
 //
 
 import Foundation
+import RxRelay
+import RxFlow
+import ReactorKit
+
+
+class SplashReactor: Reactor, Stepper {
+    
+    let steps = PublishRelay<Step>()
+    
+    enum Action {
+        
+    }
+    
+    enum Mutation {
+        
+    }
+    
+    struct State {
+        
+    }
+    
+    
+    var initialState: State = State()
+}

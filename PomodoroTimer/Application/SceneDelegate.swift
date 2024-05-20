@@ -6,17 +6,56 @@
 //
 
 import UIKit
+import RxSwift
+import RxFlow
+
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    let disposeBag = DisposeBag()
+    var coordinator = FlowCoordinator()
+    var appService = AppServices()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        
+        // Scene 캡처
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        // 2. window scene을 가져오는 windowScene을 생성자를 사용해서 UIWindow를 생성
+        let window = UIWindow(windowScene: windowScene)
+        
+        // 3. viewe 계층을 프로그래밍 방식으로 만들기
+        let splashVC = SplashViewController.instantiate("SplashViewController")
+        let appNav = UINavigationController(rootViewController: splashVC)
+        let rootVC = appNav
+        
+        // 4. ViewController로 window의 root view controller를 설정
+        window.rootViewController = rootVC
+        
+        // 5. window 설정.
+        self.window = window
+        self.window?.makeKeyAndVisible()
+        
+//        let appFlow = AppFlow(services: appService)
+//        Flows.use(appFlow, when: .created) { root in
+//            print(root)
+//            self.window?.rootViewController = root
+//            self.window?.makeKeyAndVisible()
+//        }
+//        
+//        self.coordinator.rx.willNavigate.subscribe(onNext: { (flow, step) in
+//            print("will navigate to flow=\(flow) and step=\(step)")
+//        }).disposed(by: self.disposeBag)
+//        
+//        self.coordinator.rx.didNavigate.subscribe(onNext: { (flow, step) in
+//            print("did navigate to flow=\(flow) and step=\(step)")
+//        }).disposed(by: self.disposeBag)
+//        
+//        self.coordinator.coordinate(flow: appFlow, with: AppStepper())
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

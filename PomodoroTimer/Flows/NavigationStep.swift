@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import RxFlow
+
+
+enum NavigationStep: Step {
+    // Splash
+    case splash
+    
+    // Login
+    case loginIsRequired
+    case userIsLoggedIn
+}
