@@ -13,7 +13,12 @@ enum NavigationStep: Step {
     // Splash
     case splash
     
-    // Login
-    case loginIsRequired
-    case userIsLoggedIn
+    // TabBar
+    case tabBarIsRequired
+    
+    // Home
+    case homeIsRequired
+    
+    // History
+    case historyIsRequired
 }

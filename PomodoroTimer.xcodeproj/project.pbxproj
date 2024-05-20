@@ -19,13 +19,24 @@
 		DF50F6FA2BF8EFD500DDA1EC /* NavigationStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50F6F92BF8EFD500DDA1EC /* NavigationStep.swift */; };
 		DF50F7022BF8F22900DDA1EC /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50F7012BF8F22900DDA1EC /* AppServices.swift */; };
 		DF50F7062BF90F5000DDA1EC /* SplashReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50F7052BF90F5000DDA1EC /* SplashReactor.swift */; };
-		DF50F7082BF9112800DDA1EC /* SplashFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50F7072BF9112800DDA1EC /* SplashFlow.swift */; };
 		DF50F70C2BF914DD00DDA1EC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50F7092BF914DD00DDA1EC /* SplashViewController.swift */; };
 		DF50F7142BF9F49700DDA1EC /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = DF50F7132BF9F49700DDA1EC /* Reusable */; };
 		DF50F7172BF9FCA100DDA1EC /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = DF50F7162BF9FCA100DDA1EC /* Swinject */; };
 		DF84CDBD2BF7B093006C922C /* RxFlow in Frameworks */ = {isa = PBXBuildFile; productRef = DF84CDBC2BF7B093006C922C /* RxFlow */; };
 		DFE838D82BFB1D0F0001CF90 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE838D72BFB1D0F0001CF90 /* Storyboarded.swift */; };
 		DFE838FA2BFB266F0001CF90 /* SplashViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE838F92BFB266F0001CF90 /* SplashViewController.storyboard */; };
+		DFE839022BFB465A0001CF90 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE838FF2BFB465A0001CF90 /* HomeViewController.swift */; };
+		DFE839032BFB465A0001CF90 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE839002BFB465A0001CF90 /* HomeViewController.xib */; };
+		DFE839052BFB468F0001CF90 /* HomeReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839042BFB468F0001CF90 /* HomeReactor.swift */; };
+		DFE839072BFB47FA0001CF90 /* TabBarFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839062BFB47FA0001CF90 /* TabBarFlow.swift */; };
+		DFE839092BFB4D8A0001CF90 /* HomeFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839082BFB4D8A0001CF90 /* HomeFlow.swift */; };
+		DFE8390B2BFB4DCF0001CF90 /* HistoryFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8390A2BFB4DCF0001CF90 /* HistoryFlow.swift */; };
+		DFE8390F2BFB50FD0001CF90 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE8390E2BFB50FD0001CF90 /* HistoryViewController.xib */; };
+		DFE839102BFB50FD0001CF90 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8390D2BFB50FD0001CF90 /* HistoryViewController.swift */; };
+		DFE839122BFB51320001CF90 /* HistoryReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839112BFB51320001CF90 /* HistoryReactor.swift */; };
+		DFE839162BFB57640001CF90 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839152BFB57640001CF90 /* BaseVC.swift */; };
+		DFE839182BFB58CF0001CF90 /* ReactorBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839172BFB58CF0001CF90 /* ReactorBased.swift */; };
+		DFE8391A2BFB617D0001CF90 /* SplashFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839192BFB617D0001CF90 /* SplashFlow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,10 +50,21 @@
 		DF50F6F92BF8EFD500DDA1EC /* NavigationStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStep.swift; sourceTree = "<group>"; };
 		DF50F7012BF8F22900DDA1EC /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
 		DF50F7052BF90F5000DDA1EC /* SplashReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashReactor.swift; sourceTree = "<group>"; };
-		DF50F7072BF9112800DDA1EC /* SplashFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFlow.swift; sourceTree = "<group>"; };
 		DF50F7092BF914DD00DDA1EC /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		DFE838D72BFB1D0F0001CF90 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		DFE838F92BFB266F0001CF90 /* SplashViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashViewController.storyboard; sourceTree = "<group>"; };
+		DFE838FF2BFB465A0001CF90 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DFE839002BFB465A0001CF90 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		DFE839042BFB468F0001CF90 /* HomeReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReactor.swift; sourceTree = "<group>"; };
+		DFE839062BFB47FA0001CF90 /* TabBarFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFlow.swift; sourceTree = "<group>"; };
+		DFE839082BFB4D8A0001CF90 /* HomeFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlow.swift; sourceTree = "<group>"; };
+		DFE8390A2BFB4DCF0001CF90 /* HistoryFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryFlow.swift; sourceTree = "<group>"; };
+		DFE8390D2BFB50FD0001CF90 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		DFE8390E2BFB50FD0001CF90 /* HistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
+		DFE839112BFB51320001CF90 /* HistoryReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryReactor.swift; sourceTree = "<group>"; };
+		DFE839152BFB57640001CF90 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		DFE839172BFB58CF0001CF90 /* ReactorBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactorBased.swift; sourceTree = "<group>"; };
+		DFE839192BFB617D0001CF90 /* SplashFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFlow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +118,11 @@
 			isa = PBXGroup;
 			children = (
 				DF50F6F72BF8EFCE00DDA1EC /* AppFlow.swift */,
-				DF50F7072BF9112800DDA1EC /* SplashFlow.swift */,
+				DFE839192BFB617D0001CF90 /* SplashFlow.swift */,
 				DF50F6F92BF8EFD500DDA1EC /* NavigationStep.swift */,
+				DFE839062BFB47FA0001CF90 /* TabBarFlow.swift */,
+				DFE839082BFB4D8A0001CF90 /* HomeFlow.swift */,
+				DFE8390A2BFB4DCF0001CF90 /* HistoryFlow.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -132,6 +157,8 @@
 		DF50F6FF2BF8F08A00DDA1EC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				DFE8390C2BFB50F10001CF90 /* History */,
+				DFE839012BFB465A0001CF90 /* Home */,
 				DF50F7042BF90F4900DDA1EC /* Splash */,
 			);
 			path = UI;
@@ -159,8 +186,30 @@
 			isa = PBXGroup;
 			children = (
 				DFE838D72BFB1D0F0001CF90 /* Storyboarded.swift */,
+				DFE839172BFB58CF0001CF90 /* ReactorBased.swift */,
+				DFE839152BFB57640001CF90 /* BaseVC.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		DFE839012BFB465A0001CF90 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DFE838FF2BFB465A0001CF90 /* HomeViewController.swift */,
+				DFE839002BFB465A0001CF90 /* HomeViewController.xib */,
+				DFE839042BFB468F0001CF90 /* HomeReactor.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DFE8390C2BFB50F10001CF90 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				DFE8390D2BFB50FD0001CF90 /* HistoryViewController.swift */,
+				DFE8390E2BFB50FD0001CF90 /* HistoryViewController.xib */,
+				DFE839112BFB51320001CF90 /* HistoryReactor.swift */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +289,8 @@
 				DF4FFFF82BF62C16000D361C /* Assets.xcassets in Resources */,
 				DFE838FA2BFB266F0001CF90 /* SplashViewController.storyboard in Resources */,
 				DF4FFFFB2BF62C16000D361C /* Base in Resources */,
+				DFE8390F2BFB50FD0001CF90 /* HistoryViewController.xib in Resources */,
+				DFE839032BFB465A0001CF90 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +302,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF50F6F82BF8EFCE00DDA1EC /* AppFlow.swift in Sources */,
+				DFE839122BFB51320001CF90 /* HistoryReactor.swift in Sources */,
 				DF50F6FA2BF8EFD500DDA1EC /* NavigationStep.swift in Sources */,
 				DFE838D82BFB1D0F0001CF90 /* Storyboarded.swift in Sources */,
+				DFE8390B2BFB4DCF0001CF90 /* HistoryFlow.swift in Sources */,
+				DFE839052BFB468F0001CF90 /* HomeReactor.swift in Sources */,
+				DFE839102BFB50FD0001CF90 /* HistoryViewController.swift in Sources */,
 				DF50F7062BF90F5000DDA1EC /* SplashReactor.swift in Sources */,
-				DF50F7082BF9112800DDA1EC /* SplashFlow.swift in Sources */,
 				DF50F7022BF8F22900DDA1EC /* AppServices.swift in Sources */,
+				DFE839072BFB47FA0001CF90 /* TabBarFlow.swift in Sources */,
+				DFE839022BFB465A0001CF90 /* HomeViewController.swift in Sources */,
+				DFE839182BFB58CF0001CF90 /* ReactorBased.swift in Sources */,
+				DFE839162BFB57640001CF90 /* BaseVC.swift in Sources */,
 				DF4FFFEF2BF62C15000D361C /* AppDelegate.swift in Sources */,
 				DF4FFFF12BF62C15000D361C /* SceneDelegate.swift in Sources */,
+				DFE839092BFB4D8A0001CF90 /* HomeFlow.swift in Sources */,
+				DFE8391A2BFB617D0001CF90 /* SplashFlow.swift in Sources */,
 				DF50F70C2BF914DD00DDA1EC /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

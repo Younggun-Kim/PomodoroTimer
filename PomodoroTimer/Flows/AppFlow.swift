@@ -9,6 +9,7 @@ import Foundation
 import RxFlow
 import RxRelay
 import UIKit
+import ReactorKit
 
 
 class AppFlow: Flow {
@@ -42,6 +43,9 @@ class AppFlow: Flow {
         switch step {
         case .splash:
             return navigationToSplash()
+            
+        case .tabBarIsRequired:
+            return navigationToTabBar()
         default:
             return .none
         }
@@ -49,18 +53,30 @@ class AppFlow: Flow {
 }
 
 extension AppFlow {
-    
     private func navigationToSplash() -> FlowContributors {
+        print(#fileID, #function, #line, "-")
+//        let flow = SplashFlow()
+//        return .one(flowContributor: .contribute(withNextPresentable: flow, withNextStepper: OneStepper(withSingleStep: NavigationStep.splash)))
         
-        let splashVC = SplashViewController.instantiate("SplashViewController")
-        let splashFlow = SplashFlow()
+        let reactor = SplashReactor()
+        let vc = SplashViewController.instantiate(withReactor: reactor)
+        let flow = SplashFlow()
         
-        self.rootViewController.setViewControllers([splashVC], animated: true)
+        self.rootViewController.pushViewController(vc, animated: true)
+        return .one(flowContributor: .contribute(withNextPresentable: flow, withNextStepper: reactor))
+    }
+    
+    private func navigationToTabBar() -> FlowContributors {
+        print(#fileID, #function, #line, "-")
+        let tabBarFlow = TabBarFlow()
+        
+        Flows.use(tabBarFlow, when: .created) { flowRoot in
+            self.rootViewController.pushViewController(flowRoot, animated: true)
+        }
         
         return .one(flowContributor: .contribute(
-                withNextPresentable: splashVC,
-                withNextStepper: OneStepper(withSingleStep: NavigationStep.splash)
-            )
+            withNextPresentable: tabBarFlow,
+            withNextStepper: OneStepper(withSingleStep: NavigationStep.tabBarIsRequired))
         )
     }
 }
@@ -72,8 +88,8 @@ extension AppFlow {
  */
 class AppStepper: Stepper {
     let steps = PublishRelay<Step>()
-
+    
     var initialStep: Step {
-        return NavigationStep.splash
+        return NavigationStep.tabBarIsRequired
     }
 }
