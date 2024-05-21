@@ -44,9 +44,9 @@ class TabBarFlow: Flow {
         let historyFlow = HistoryFlow()
         
         Flows.use(homeFlow, historyFlow, when: .created) { [unowned self] (homeVC: UINavigationController, historyVC: UINavigationController) in
+            print("Flows.use home, history")
             homeVC.tabBarItem = UITabBarItem(title: "HOME", image: UIImage(systemName: "1.circle"), tag: 0)
             historyVC.tabBarItem = UITabBarItem(title: "HISTORY", image: UIImage(systemName: "2.circle"), tag: 1)
-            
             self.rootViewController.setViewControllers([homeVC, historyVC], animated: false)
         }
         

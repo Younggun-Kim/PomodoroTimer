@@ -39,6 +39,7 @@
 		DFE8391A2BFB617D0001CF90 /* SplashFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839192BFB617D0001CF90 /* SplashFlow.swift */; };
 		DFE8391D2BFB988C0001CF90 /* HGCircularSlider in Frameworks */ = {isa = PBXBuildFile; productRef = DFE8391C2BFB988C0001CF90 /* HGCircularSlider */; };
 		DFE839202BFB99950001CF90 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = DFE8391F2BFB99950001CF90 /* Then */; };
+		DFE839232BFC84800001CF90 /* UIApplicationEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839222BFC84800001CF90 /* UIApplicationEx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		DFE839152BFB57640001CF90 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		DFE839172BFB58CF0001CF90 /* ReactorBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactorBased.swift; sourceTree = "<group>"; };
 		DFE839192BFB617D0001CF90 /* SplashFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFlow.swift; sourceTree = "<group>"; };
+		DFE839222BFC84800001CF90 /* UIApplicationEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationEx.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 		DF4FFFED2BF62C15000D361C /* PomodoroTimer */ = {
 			isa = PBXGroup;
 			children = (
+				DFE839212BFC84770001CF90 /* Extensions */,
 				DF50F6FD2BF8F04600DDA1EC /* Application */,
 				DF50F6F62BF8EFBC00DDA1EC /* Flows */,
 				DF50F7002BF8F21E00DDA1EC /* Services */,
@@ -216,6 +219,14 @@
 			path = History;
 			sourceTree = "<group>";
 		};
+		DFE839212BFC84770001CF90 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DFE839222BFC84800001CF90 /* UIApplicationEx.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -313,6 +324,7 @@
 				DFE839122BFB51320001CF90 /* HistoryReactor.swift in Sources */,
 				DF50F6FA2BF8EFD500DDA1EC /* NavigationStep.swift in Sources */,
 				DFE838D82BFB1D0F0001CF90 /* Storyboarded.swift in Sources */,
+				DFE839232BFC84800001CF90 /* UIApplicationEx.swift in Sources */,
 				DFE8390B2BFB4DCF0001CF90 /* HistoryFlow.swift in Sources */,
 				DFE839052BFB468F0001CF90 /* HomeReactor.swift in Sources */,
 				DFE839102BFB50FD0001CF90 /* HistoryViewController.swift in Sources */,

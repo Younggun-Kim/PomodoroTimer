@@ -90,6 +90,6 @@ class AppStepper: Stepper {
     let steps = PublishRelay<Step>()
     
     var initialStep: Step {
-        return NavigationStep.tabBarIsRequired
+        return NavigationStep.splash
     }
 }
