@@ -1,6 +1,15 @@
 {
-  "originHash" : "73c36aeb28862a4b8580deeff76bd30091681c6c72e2e5bae170933f58af6a00",
+  "originHash" : "f972b02dce1cc7a8ae405203570f259b7a14bef6742031bb7253d8756b5415b8",
   "pins" : [
+    {
+      "identity" : "hgcircularslider",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/HamzaGhazouani/HGCircularSlider.git",
+      "state" : {
+        "revision" : "2b98462d32bf7211851aa73537dbaba5dd80229e",
+        "version" : "2.2.1"
+      }
+    },
     {
       "identity" : "reactorkit",
       "kind" : "remoteSourceControl",
@@ -44,6 +53,15 @@
       "state" : {
         "revision" : "3125943807991bc271d366205d98713696d65a1f",
         "version" : "2.8.8"
+      }
+    },
+    {
+      "identity" : "then",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/devxoul/Then.git",
+      "state" : {
+        "revision" : "d41ef523faef0f911369f79c0b96815d9dbb6d7a",
+        "version" : "3.0.0"
       }
     },
     {

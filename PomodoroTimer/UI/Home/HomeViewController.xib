@@ -10,6 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="PomodoroTimer" customModuleProvider="target">
             <connections>
+                <outlet property="circularSlider" destination="Lkd-1J-rem" id="RVV-YN-bFN"/>
+                <outlet property="pauseBtn" destination="RuQ-hp-FBs" id="3jt-rj-Ptt"/>
+                <outlet property="playBtn" destination="Th3-as-wyk" id="sIo-Ku-oHS"/>
+                <outlet property="timeLabel" destination="7ZV-oL-12v" id="vhx-s7-sJw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,18 +22,46 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elq-Xb-saU">
-                    <rect key="frame" x="150.33333333333334" y="408" width="92.333333333333343" height="36"/>
-                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lkd-1J-rem" customClass="CircularSlider" customModule="HGCircularSlider">
+                    <rect key="frame" x="20" y="249.66666666666663" width="353" height="353"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Lkd-1J-rem" secondAttribute="height" id="Fo6-4P-8Nq"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ZV-oL-12v">
+                    <rect key="frame" x="176" y="416" width="41.333333333333343" height="20.333333333333314"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9wk-Ap-iDz">
+                    <rect key="frame" x="20" y="622.66666666666663" width="353" height="34.333333333333371"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RuQ-hp-FBs">
+                            <rect key="frame" x="0.0" y="0.0" width="166.66666666666666" height="34.333333333333336"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Pause"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Th3-as-wyk">
+                            <rect key="frame" x="186.66666666666663" y="0.0" width="166.33333333333337" height="34.333333333333336"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Play"/>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Elq-Xb-saU" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="0UW-bs-Qg3"/>
-                <constraint firstItem="Elq-Xb-saU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZgN-3i-sPL"/>
+                <constraint firstItem="7ZV-oL-12v" firstAttribute="centerX" secondItem="Lkd-1J-rem" secondAttribute="centerX" id="0MO-u6-79p"/>
+                <constraint firstItem="9wk-Ap-iDz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="7Oq-zw-NgK"/>
+                <constraint firstItem="Lkd-1J-rem" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="8Uq-VS-2qB"/>
+                <constraint firstItem="Lkd-1J-rem" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="FLr-hW-0Wf"/>
+                <constraint firstItem="9wk-Ap-iDz" firstAttribute="top" secondItem="Lkd-1J-rem" secondAttribute="bottom" constant="20" id="TWi-xl-PC4"/>
+                <constraint firstItem="7ZV-oL-12v" firstAttribute="centerY" secondItem="Lkd-1J-rem" secondAttribute="centerY" id="a5C-oE-rVz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9wk-Ap-iDz" secondAttribute="trailing" constant="20" id="ek0-XP-uF0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Lkd-1J-rem" secondAttribute="trailing" constant="20" id="ot1-Ct-Egk"/>
             </constraints>
             <point key="canvasLocation" x="118" y="21"/>
         </view>
