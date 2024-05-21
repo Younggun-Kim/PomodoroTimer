@@ -30,6 +30,11 @@ class HistoryViewController: UIViewController, ReactorBased, StoryboardBased {
         super.init(coder: coder)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationItem.title = StringRes.TimerHistory
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

@@ -40,6 +40,9 @@
 		DFE8391D2BFB988C0001CF90 /* HGCircularSlider in Frameworks */ = {isa = PBXBuildFile; productRef = DFE8391C2BFB988C0001CF90 /* HGCircularSlider */; };
 		DFE839202BFB99950001CF90 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = DFE8391F2BFB99950001CF90 /* Then */; };
 		DFE839232BFC84800001CF90 /* UIApplicationEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839222BFC84800001CF90 /* UIApplicationEx.swift */; };
+		DFE839252BFCBA7A0001CF90 /* StringRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839242BFCBA7A0001CF90 /* StringRes.swift */; };
+		DFE839272BFCCD870001CF90 /* UINavigationControllerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839262BFCCD870001CF90 /* UINavigationControllerEx.swift */; };
+		DFE839292BFCCE6B0001CF90 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839282BFCCE6B0001CF90 /* BaseNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +72,9 @@
 		DFE839172BFB58CF0001CF90 /* ReactorBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactorBased.swift; sourceTree = "<group>"; };
 		DFE839192BFB617D0001CF90 /* SplashFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFlow.swift; sourceTree = "<group>"; };
 		DFE839222BFC84800001CF90 /* UIApplicationEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationEx.swift; sourceTree = "<group>"; };
+		DFE839242BFCBA7A0001CF90 /* StringRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringRes.swift; sourceTree = "<group>"; };
+		DFE839262BFCCD870001CF90 /* UINavigationControllerEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerEx.swift; sourceTree = "<group>"; };
+		DFE839282BFCCE6B0001CF90 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +146,7 @@
 				DF50F6FE2BF8F07300DDA1EC /* Resources */,
 				DF4FFFF92BF62C16000D361C /* LaunchScreen.storyboard */,
 				DF4FFFFC2BF62C16000D361C /* Info.plist */,
+				DFE839242BFCBA7A0001CF90 /* StringRes.swift */,
 			);
 			path = Supportings;
 			sourceTree = "<group>";
@@ -195,6 +202,7 @@
 				DFE838D72BFB1D0F0001CF90 /* Storyboarded.swift */,
 				DFE839172BFB58CF0001CF90 /* ReactorBased.swift */,
 				DFE839152BFB57640001CF90 /* BaseVC.swift */,
+				DFE839282BFCCE6B0001CF90 /* BaseNavigationController.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -223,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				DFE839222BFC84800001CF90 /* UIApplicationEx.swift */,
+				DFE839262BFCCD870001CF90 /* UINavigationControllerEx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -322,11 +331,13 @@
 			files = (
 				DF50F6F82BF8EFCE00DDA1EC /* AppFlow.swift in Sources */,
 				DFE839122BFB51320001CF90 /* HistoryReactor.swift in Sources */,
+				DFE839272BFCCD870001CF90 /* UINavigationControllerEx.swift in Sources */,
 				DF50F6FA2BF8EFD500DDA1EC /* NavigationStep.swift in Sources */,
 				DFE838D82BFB1D0F0001CF90 /* Storyboarded.swift in Sources */,
 				DFE839232BFC84800001CF90 /* UIApplicationEx.swift in Sources */,
 				DFE8390B2BFB4DCF0001CF90 /* HistoryFlow.swift in Sources */,
 				DFE839052BFB468F0001CF90 /* HomeReactor.swift in Sources */,
+				DFE839252BFCBA7A0001CF90 /* StringRes.swift in Sources */,
 				DFE839102BFB50FD0001CF90 /* HistoryViewController.swift in Sources */,
 				DF50F7062BF90F5000DDA1EC /* SplashReactor.swift in Sources */,
 				DF50F7022BF8F22900DDA1EC /* AppServices.swift in Sources */,
@@ -336,6 +347,7 @@
 				DFE839162BFB57640001CF90 /* BaseVC.swift in Sources */,
 				DF4FFFEF2BF62C15000D361C /* AppDelegate.swift in Sources */,
 				DF4FFFF12BF62C15000D361C /* SceneDelegate.swift in Sources */,
+				DFE839292BFCCE6B0001CF90 /* BaseNavigationController.swift in Sources */,
 				DFE839092BFB4D8A0001CF90 /* HomeFlow.swift in Sources */,
 				DFE8391A2BFB617D0001CF90 /* SplashFlow.swift in Sources */,
 				DF50F70C2BF914DD00DDA1EC /* SplashViewController.swift in Sources */,

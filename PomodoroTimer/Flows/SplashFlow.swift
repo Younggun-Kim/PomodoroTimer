@@ -44,11 +44,10 @@ class SplashFlow: Flow {
     }
     
     private func navigationToTabBar() -> FlowContributors {
-        let tabBarFlow = TabBarFlow()        
+        let tabBarFlow = TabBarFlow()
         Flows.use(tabBarFlow, when: .created) { flowRoot in
-            
-//             SplashViewController에서 안 넘어가지는 버그.
-//            self.rootViewController.pushViewController(flowRoot, animated: true)
+            // SplashViewController에서 안 넘어가지는 버그.
+            // self.rootViewController.pushViewController(flowRoot, animated: true)
             UIApplication.keyWindow?.rootViewController = flowRoot
         }
         

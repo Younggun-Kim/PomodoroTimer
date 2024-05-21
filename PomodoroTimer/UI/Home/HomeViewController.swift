@@ -13,7 +13,7 @@ import ReactorKit
 import HGCircularSlider
 import Then
 
-class HomeViewController: UIViewController, ReactorBased, StoryboardBased {
+class HomeViewController: BaseVC, ReactorBased, StoryboardBased {
     
     // MARK: - IBOutlets
     
@@ -21,6 +21,17 @@ class HomeViewController: UIViewController, ReactorBased, StoryboardBased {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var playBtn: UIButton!
     @IBOutlet weak var pauseBtn: UIButton!
+    
+    // 네비게이션 설정 버튼.
+    lazy var settingButton: UIButton = {
+        var button = UIButton(type: .custom)
+        var image = UIImage(systemName: "gearshape.fill")?
+            .withRenderingMode(.alwaysOriginal)
+            .withTintColor(.black)
+        
+        button.setImage(image, for: .normal)
+        return button
+    }()
     
     // MARK: - ReactorKit
     
@@ -48,17 +59,22 @@ class HomeViewController: UIViewController, ReactorBased, StoryboardBased {
         super.init(coder: coder)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.title = StringRes.AppName
+        self.setNavigationRightBarButton()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.configView()
+        self.setConfig()
         
         if let reactor = self.reactor {
             self.bind(reactor: reactor)
         }
     }
     
-    private func configView() {
+    private func setConfig() {
         self.circularSlider.do {
             $0.minimumValue = 0.0
             $0.maximumValue = 60.0
@@ -83,8 +99,14 @@ class HomeViewController: UIViewController, ReactorBased, StoryboardBased {
         }
     }
     
+    private func setNavigationRightBarButton() {
+        let barButton = UIBarButtonItem(customView: self.settingButton)
+        self.navigationItem.setRightBarButton(barButton, animated: true)
+    }
+    
     // MARK: Bind Reactor
     func bind(reactor: HomeReactor) {
+        self.disposeBag = DisposeBag()
         self.bindAction(reactor: reactor)
         self.bindState(reactor: reactor)
     }
@@ -104,6 +126,16 @@ class HomeViewController: UIViewController, ReactorBased, StoryboardBased {
             .map { HomeReactor.Action.pause}
             .debug()
             .bind(to: reactor.action)
+            .disposed(by: self.disposeBag)
+        
+        settingButton
+            .rx
+            .tap
+            .asDriver()
+            .throttle(.milliseconds(500))
+            .drive(onNext: {
+                print("settingButton")
+            })
             .disposed(by: self.disposeBag)
     }
     

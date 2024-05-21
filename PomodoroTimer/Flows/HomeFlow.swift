@@ -15,10 +15,9 @@ class HomeFlow: Flow {
         return self.rootViewController
     }
     
-    private lazy var rootViewController: UINavigationController = {
-        let viewController = UINavigationController()
-        viewController.setNavigationBarHidden(true, animated: false)
-        return viewController
+    private lazy var rootViewController: BaseNavigationController = {
+        let vc = BaseNavigationController()
+        return vc
     }()
     
     init() {}
