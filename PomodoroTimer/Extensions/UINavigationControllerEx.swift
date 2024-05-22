@@ -12,6 +12,7 @@ import UIKit
 extension UINavigationController {
     func popToViewController(ofClass: AnyClass, animated: Bool) {
         if let vc = viewControllers.filter({ $0.isKind(of: ofClass) }).first {
+            print("find find - ",vc)
             popToViewController(vc, animated: animated)
         }
     }

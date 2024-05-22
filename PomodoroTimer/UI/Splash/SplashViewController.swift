@@ -11,7 +11,7 @@ import ReactorKit
 import RxFlow
 import RxRelay
 
-class SplashViewController: UIViewController, ReactorBased {
+class SplashViewController: UIViewController, View {
     
     
     // MARK: ReactorKit

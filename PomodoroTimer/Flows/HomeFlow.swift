@@ -51,14 +51,14 @@ class HomeFlow: Flow {
     
     func navigationToHome() -> FlowContributors {
         let reactor = HomeReactor()
-        let vc = HomeViewController(reactor: reactor)
+        let vc = HomeViewController.instantiate(withReactor: reactor)
         self.rootViewController.pushViewController(vc, animated: true)
         return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vc.reactor!))
     }
     
     func navigationToSetting() -> FlowContributors {
         let reactor = SettingReactor()
-        let vc = SettingViewController(reactor: reactor)
+        let vc = SettingViewController.instantiate(withReactor: reactor)
         
         vc.hidesBottomBarWhenPushed = true
         
@@ -70,9 +70,7 @@ class HomeFlow: Flow {
     }
     
     func popToSettingViewController() -> FlowContributors {
-        
-        // TODO: - Pop방식을 VC를 받아서 처리하는 것으로 바꿔보기.
-        UIApplication.topViewController()?.navigationController?.popViewController(animated: true)
+        self.rootViewController.popViewController(animated: true)
         return .none
     }
 }

@@ -13,7 +13,7 @@ import ReactorKit
 import HGCircularSlider
 import Then
 
-class HomeViewController: BaseVC, ReactorBased, StoryboardBased {
+class HomeViewController: BaseVC, View, StoryboardBased {
     
     // MARK: - IBOutlets
     

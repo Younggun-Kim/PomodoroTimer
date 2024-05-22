@@ -42,7 +42,7 @@ class HistoryFlow: Flow {
     
     func navigationToHistory() -> FlowContributors {
         let reactor = HistoryReactor()
-        let vc = HistoryViewController(reactor: reactor)
+        let vc = HistoryViewController.instantiate(withReactor: reactor)
         self.rootViewController.pushViewController(vc, animated: true)
         return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vc.reactor!))
     }

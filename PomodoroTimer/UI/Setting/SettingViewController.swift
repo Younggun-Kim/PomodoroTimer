@@ -13,7 +13,7 @@ import RxSwift
 /**
  시간 설정 화면
  */
-class SettingViewController: BaseVC, ReactorBased, UIPickerViewDelegate {
+class SettingViewController: BaseVC, View, UIPickerViewDelegate {
     
     // MARK: - IBOutlet
     @IBOutlet weak var goalLabel: UILabel!

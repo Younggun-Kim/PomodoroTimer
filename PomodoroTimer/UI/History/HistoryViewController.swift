@@ -11,7 +11,7 @@ import ReactorKit
 import RxSwift
 
 
-class HistoryViewController: UIViewController, ReactorBased, StoryboardBased {
+class HistoryViewController: UIViewController, View, StoryboardBased {
     typealias Reactor = HistoryReactor
     
     var disposeBag = DisposeBag()

@@ -26,16 +26,13 @@
 		DFE838D82BFB1D0F0001CF90 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE838D72BFB1D0F0001CF90 /* Storyboarded.swift */; };
 		DFE838FA2BFB266F0001CF90 /* SplashViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE838F92BFB266F0001CF90 /* SplashViewController.storyboard */; };
 		DFE839022BFB465A0001CF90 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE838FF2BFB465A0001CF90 /* HomeViewController.swift */; };
-		DFE839032BFB465A0001CF90 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE839002BFB465A0001CF90 /* HomeViewController.xib */; };
 		DFE839052BFB468F0001CF90 /* HomeReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839042BFB468F0001CF90 /* HomeReactor.swift */; };
 		DFE839072BFB47FA0001CF90 /* TabBarFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839062BFB47FA0001CF90 /* TabBarFlow.swift */; };
 		DFE839092BFB4D8A0001CF90 /* HomeFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839082BFB4D8A0001CF90 /* HomeFlow.swift */; };
 		DFE8390B2BFB4DCF0001CF90 /* HistoryFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8390A2BFB4DCF0001CF90 /* HistoryFlow.swift */; };
-		DFE8390F2BFB50FD0001CF90 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE8390E2BFB50FD0001CF90 /* HistoryViewController.xib */; };
 		DFE839102BFB50FD0001CF90 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8390D2BFB50FD0001CF90 /* HistoryViewController.swift */; };
 		DFE839122BFB51320001CF90 /* HistoryReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839112BFB51320001CF90 /* HistoryReactor.swift */; };
 		DFE839162BFB57640001CF90 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839152BFB57640001CF90 /* BaseVC.swift */; };
-		DFE839182BFB58CF0001CF90 /* ReactorBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839172BFB58CF0001CF90 /* ReactorBased.swift */; };
 		DFE8391A2BFB617D0001CF90 /* SplashFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839192BFB617D0001CF90 /* SplashFlow.swift */; };
 		DFE8391D2BFB988C0001CF90 /* HGCircularSlider in Frameworks */ = {isa = PBXBuildFile; productRef = DFE8391C2BFB988C0001CF90 /* HGCircularSlider */; };
 		DFE839202BFB99950001CF90 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = DFE8391F2BFB99950001CF90 /* Then */; };
@@ -45,8 +42,10 @@
 		DFE839292BFCCE6B0001CF90 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839282BFCCE6B0001CF90 /* BaseNavigationController.swift */; };
 		DFE8392E2BFDECEF0001CF90 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8392D2BFDECEF0001CF90 /* SettingViewController.swift */; };
 		DFE839302BFDED9E0001CF90 /* SettingReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8392F2BFDED9E0001CF90 /* SettingReactor.swift */; };
-		DFE839322BFE1D240001CF90 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE839312BFE1D240001CF90 /* SettingViewController.xib */; };
 		DFE839352BFE3D430001CF90 /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839342BFE3D430001CF90 /* RecordModel.swift */; };
+		DFE839392BFE508F0001CF90 /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE839382BFE508F0001CF90 /* SettingViewController.storyboard */; };
+		DFE8393B2BFE50BE0001CF90 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE8393A2BFE50BE0001CF90 /* HomeViewController.storyboard */; };
+		DFE8393D2BFE51060001CF90 /* HistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE8393C2BFE51060001CF90 /* HistoryViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,16 +63,13 @@
 		DFE838D72BFB1D0F0001CF90 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		DFE838F92BFB266F0001CF90 /* SplashViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashViewController.storyboard; sourceTree = "<group>"; };
 		DFE838FF2BFB465A0001CF90 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		DFE839002BFB465A0001CF90 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		DFE839042BFB468F0001CF90 /* HomeReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReactor.swift; sourceTree = "<group>"; };
 		DFE839062BFB47FA0001CF90 /* TabBarFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFlow.swift; sourceTree = "<group>"; };
 		DFE839082BFB4D8A0001CF90 /* HomeFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlow.swift; sourceTree = "<group>"; };
 		DFE8390A2BFB4DCF0001CF90 /* HistoryFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryFlow.swift; sourceTree = "<group>"; };
 		DFE8390D2BFB50FD0001CF90 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
-		DFE8390E2BFB50FD0001CF90 /* HistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
 		DFE839112BFB51320001CF90 /* HistoryReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryReactor.swift; sourceTree = "<group>"; };
 		DFE839152BFB57640001CF90 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
-		DFE839172BFB58CF0001CF90 /* ReactorBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactorBased.swift; sourceTree = "<group>"; };
 		DFE839192BFB617D0001CF90 /* SplashFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFlow.swift; sourceTree = "<group>"; };
 		DFE839222BFC84800001CF90 /* UIApplicationEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationEx.swift; sourceTree = "<group>"; };
 		DFE839242BFCBA7A0001CF90 /* StringRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringRes.swift; sourceTree = "<group>"; };
@@ -81,8 +77,10 @@
 		DFE839282BFCCE6B0001CF90 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		DFE8392D2BFDECEF0001CF90 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		DFE8392F2BFDED9E0001CF90 /* SettingReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingReactor.swift; sourceTree = "<group>"; };
-		DFE839312BFE1D240001CF90 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		DFE839342BFE3D430001CF90 /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
+		DFE839382BFE508F0001CF90 /* SettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingViewController.storyboard; sourceTree = "<group>"; };
+		DFE8393A2BFE50BE0001CF90 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		DFE8393C2BFE51060001CF90 /* HistoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				DFE838D72BFB1D0F0001CF90 /* Storyboarded.swift */,
-				DFE839172BFB58CF0001CF90 /* ReactorBased.swift */,
 				DFE839152BFB57640001CF90 /* BaseVC.swift */,
 				DFE839282BFCCE6B0001CF90 /* BaseNavigationController.swift */,
 			);
@@ -221,7 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				DFE838FF2BFB465A0001CF90 /* HomeViewController.swift */,
-				DFE839002BFB465A0001CF90 /* HomeViewController.xib */,
+				DFE8393A2BFE50BE0001CF90 /* HomeViewController.storyboard */,
 				DFE839042BFB468F0001CF90 /* HomeReactor.swift */,
 			);
 			path = Home;
@@ -231,7 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				DFE8390D2BFB50FD0001CF90 /* HistoryViewController.swift */,
-				DFE8390E2BFB50FD0001CF90 /* HistoryViewController.xib */,
+				DFE8393C2BFE51060001CF90 /* HistoryViewController.storyboard */,
 				DFE839112BFB51320001CF90 /* HistoryReactor.swift */,
 			);
 			path = History;
@@ -250,7 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				DFE8392D2BFDECEF0001CF90 /* SettingViewController.swift */,
-				DFE839312BFE1D240001CF90 /* SettingViewController.xib */,
+				DFE839382BFE508F0001CF90 /* SettingViewController.storyboard */,
 				DFE8392F2BFDED9E0001CF90 /* SettingReactor.swift */,
 			);
 			path = Setting;
@@ -343,11 +340,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF4FFFF82BF62C16000D361C /* Assets.xcassets in Resources */,
-				DFE839322BFE1D240001CF90 /* SettingViewController.xib in Resources */,
 				DFE838FA2BFB266F0001CF90 /* SplashViewController.storyboard in Resources */,
+				DFE8393B2BFE50BE0001CF90 /* HomeViewController.storyboard in Resources */,
+				DFE839392BFE508F0001CF90 /* SettingViewController.storyboard in Resources */,
 				DF4FFFFB2BF62C16000D361C /* Base in Resources */,
-				DFE8390F2BFB50FD0001CF90 /* HistoryViewController.xib in Resources */,
-				DFE839032BFB465A0001CF90 /* HomeViewController.xib in Resources */,
+				DFE8393D2BFE51060001CF90 /* HistoryViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,7 +370,6 @@
 				DF50F7022BF8F22900DDA1EC /* AppServices.swift in Sources */,
 				DFE839072BFB47FA0001CF90 /* TabBarFlow.swift in Sources */,
 				DFE839022BFB465A0001CF90 /* HomeViewController.swift in Sources */,
-				DFE839182BFB58CF0001CF90 /* ReactorBased.swift in Sources */,
 				DFE839162BFB57640001CF90 /* BaseVC.swift in Sources */,
 				DF4FFFEF2BF62C15000D361C /* AppDelegate.swift in Sources */,
 				DF4FFFF12BF62C15000D361C /* SceneDelegate.swift in Sources */,
