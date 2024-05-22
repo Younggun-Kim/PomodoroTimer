@@ -23,20 +23,20 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lkd-1J-rem" customClass="CircularSlider" customModule="HGCircularSlider">
-                    <rect key="frame" x="20" y="249.66666666666663" width="353" height="353"/>
+                    <rect key="frame" x="20" y="79" width="353" height="353"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Lkd-1J-rem" secondAttribute="height" id="Fo6-4P-8Nq"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ZV-oL-12v">
-                    <rect key="frame" x="176" y="416" width="41.333333333333343" height="20.333333333333314"/>
+                    <rect key="frame" x="176" y="245.33333333333334" width="41.333333333333343" height="20.333333333333343"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9wk-Ap-iDz">
-                    <rect key="frame" x="20" y="622.66666666666663" width="353" height="34.333333333333371"/>
+                    <rect key="frame" x="20" y="452" width="353" height="34.333333333333314"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RuQ-hp-FBs">
                             <rect key="frame" x="0.0" y="0.0" width="166.66666666666666" height="34.333333333333336"/>
@@ -55,8 +55,8 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="7ZV-oL-12v" firstAttribute="centerX" secondItem="Lkd-1J-rem" secondAttribute="centerX" id="0MO-u6-79p"/>
+                <constraint firstItem="Lkd-1J-rem" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="73w-z7-j7O"/>
                 <constraint firstItem="9wk-Ap-iDz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="7Oq-zw-NgK"/>
-                <constraint firstItem="Lkd-1J-rem" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="8Uq-VS-2qB"/>
                 <constraint firstItem="Lkd-1J-rem" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="FLr-hW-0Wf"/>
                 <constraint firstItem="9wk-Ap-iDz" firstAttribute="top" secondItem="Lkd-1J-rem" secondAttribute="bottom" constant="20" id="TWi-xl-PC4"/>
                 <constraint firstItem="7ZV-oL-12v" firstAttribute="centerY" secondItem="Lkd-1J-rem" secondAttribute="centerY" id="a5C-oE-rVz"/>

@@ -18,6 +18,7 @@ enum NavigationStep: Step {
     
     // Home
     case homeIsRequired
+    case setting
     
     // History
     case historyIsRequired

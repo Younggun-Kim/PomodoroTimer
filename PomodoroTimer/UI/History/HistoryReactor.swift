@@ -15,7 +15,7 @@ class HistoryReactor: Reactor, Stepper {
     
     // MARK: Stepper
     
-    let steps = PublishRelay<Step>()
+    var steps = PublishRelay<Step>()
     
     
     var initialStep: Step {

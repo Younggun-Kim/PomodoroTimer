@@ -43,6 +43,9 @@
 		DFE839252BFCBA7A0001CF90 /* StringRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839242BFCBA7A0001CF90 /* StringRes.swift */; };
 		DFE839272BFCCD870001CF90 /* UINavigationControllerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839262BFCCD870001CF90 /* UINavigationControllerEx.swift */; };
 		DFE839292BFCCE6B0001CF90 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839282BFCCE6B0001CF90 /* BaseNavigationController.swift */; };
+		DFE8392E2BFDECEF0001CF90 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8392D2BFDECEF0001CF90 /* SettingViewController.swift */; };
+		DFE839302BFDED9E0001CF90 /* SettingReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8392F2BFDED9E0001CF90 /* SettingReactor.swift */; };
+		DFE839322BFE1D240001CF90 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE839312BFE1D240001CF90 /* SettingViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +78,9 @@
 		DFE839242BFCBA7A0001CF90 /* StringRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringRes.swift; sourceTree = "<group>"; };
 		DFE839262BFCCD870001CF90 /* UINavigationControllerEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerEx.swift; sourceTree = "<group>"; };
 		DFE839282BFCCE6B0001CF90 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		DFE8392D2BFDECEF0001CF90 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		DFE8392F2BFDED9E0001CF90 /* SettingReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingReactor.swift; sourceTree = "<group>"; };
+		DFE839312BFE1D240001CF90 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +177,7 @@
 		DF50F6FF2BF8F08A00DDA1EC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				DFE8392A2BFDECD40001CF90 /* Setting */,
 				DFE8390C2BFB50F10001CF90 /* History */,
 				DFE839012BFB465A0001CF90 /* Home */,
 				DF50F7042BF90F4900DDA1EC /* Splash */,
@@ -234,6 +241,16 @@
 				DFE839262BFCCD870001CF90 /* UINavigationControllerEx.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DFE8392A2BFDECD40001CF90 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				DFE8392D2BFDECEF0001CF90 /* SettingViewController.swift */,
+				DFE839312BFE1D240001CF90 /* SettingViewController.xib */,
+				DFE8392F2BFDED9E0001CF90 /* SettingReactor.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF4FFFF82BF62C16000D361C /* Assets.xcassets in Resources */,
+				DFE839322BFE1D240001CF90 /* SettingViewController.xib in Resources */,
 				DFE838FA2BFB266F0001CF90 /* SplashViewController.storyboard in Resources */,
 				DF4FFFFB2BF62C16000D361C /* Base in Resources */,
 				DFE8390F2BFB50FD0001CF90 /* HistoryViewController.xib in Resources */,
@@ -347,8 +365,10 @@
 				DFE839162BFB57640001CF90 /* BaseVC.swift in Sources */,
 				DF4FFFEF2BF62C15000D361C /* AppDelegate.swift in Sources */,
 				DF4FFFF12BF62C15000D361C /* SceneDelegate.swift in Sources */,
+				DFE8392E2BFDECEF0001CF90 /* SettingViewController.swift in Sources */,
 				DFE839292BFCCE6B0001CF90 /* BaseNavigationController.swift in Sources */,
 				DFE839092BFB4D8A0001CF90 /* HomeFlow.swift in Sources */,
+				DFE839302BFDED9E0001CF90 /* SettingReactor.swift in Sources */,
 				DFE8391A2BFB617D0001CF90 /* SplashFlow.swift in Sources */,
 				DF50F70C2BF914DD00DDA1EC /* SplashViewController.swift in Sources */,
 			);

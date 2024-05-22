@@ -131,11 +131,8 @@ class HomeViewController: BaseVC, ReactorBased, StoryboardBased {
         settingButton
             .rx
             .tap
-            .asDriver()
-            .throttle(.milliseconds(500))
-            .drive(onNext: {
-                print("settingButton")
-            })
+            .map { HomeReactor.Action.setting }
+            .bind(to: reactor.action)
             .disposed(by: self.disposeBag)
     }
     

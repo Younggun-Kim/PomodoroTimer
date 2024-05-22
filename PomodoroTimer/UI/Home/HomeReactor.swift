@@ -28,11 +28,13 @@ class HomeReactor: Reactor, Stepper {
     enum Action {
         case play
         case pause
+        case setting
     }
     
     enum Mutation {
         case setTime(Int)
         case setRunning(Bool)
+        case moveSetting
     }
     
     struct State {
@@ -54,7 +56,8 @@ class HomeReactor: Reactor, Stepper {
             ])
         case .pause:
             return Observable.just(Mutation.setRunning(false))
-            
+        case .setting:
+            return Observable.just(Mutation.moveSetting)
         }
     }
     
@@ -66,6 +69,8 @@ class HomeReactor: Reactor, Stepper {
             state.currentTime = time
         case let .setRunning(isRunning):
             state.isRunning = isRunning
+        case .moveSetting:
+            self.steps.accept(NavigationStep.setting)
         }
         
         return state

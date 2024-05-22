@@ -35,6 +35,8 @@ class HomeFlow: Flow {
         switch step {
         case .homeIsRequired:
             return self.navigationToHome()
+        case .setting:
+            return self.navigationToSetting()
         default:
             return .none
         }
@@ -45,5 +47,18 @@ class HomeFlow: Flow {
         let vc = HomeViewController(reactor: reactor)
         self.rootViewController.pushViewController(vc, animated: true)
         return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vc.reactor!))
+    }
+    
+    func navigationToSetting() -> FlowContributors {
+        let reactor = SettingReactor()
+        let vc = SettingViewController(reactor: reactor)
+        
+        vc.hidesBottomBarWhenPushed = true
+        
+        self.rootViewController.pushViewController(vc, animated: true)
+        return .one(flowContributor: .contribute(
+            withNextPresentable: vc,
+            withNextStepper: vc.reactor!)
+        )
     }
 }
