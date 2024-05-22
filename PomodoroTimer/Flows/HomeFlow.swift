@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 import RxFlow
+import RxSwift
+import RxRelay
 
 
 class HomeFlow: Flow {
@@ -19,6 +21,9 @@ class HomeFlow: Flow {
         let vc = BaseNavigationController()
         return vc
     }()
+    
+    // 설정 화면 데이터 응답 릴레이
+    private var settingDataResponseRelay = PublishRelay<RecordModel>()
     
     init() {}
     
@@ -37,6 +42,8 @@ class HomeFlow: Flow {
             return self.navigationToHome()
         case .setting:
             return self.navigationToSetting()
+        case .settingSubmit:
+            return self.popToSettingViewController()
         default:
             return .none
         }
@@ -60,5 +67,12 @@ class HomeFlow: Flow {
             withNextPresentable: vc,
             withNextStepper: vc.reactor!)
         )
+    }
+    
+    func popToSettingViewController() -> FlowContributors {
+        
+        // TODO: - Pop방식을 VC를 받아서 처리하는 것으로 바꿔보기.
+        UIApplication.topViewController()?.navigationController?.popViewController(animated: true)
+        return .none
     }
 }

@@ -15,6 +15,8 @@ import RxRelay
 class SettingReactor: Reactor, Stepper {
     
     
+    init() { }
+    
     // MARK: - RxFlow Stepper
     
     var steps = PublishRelay<Step>()
@@ -23,7 +25,11 @@ class SettingReactor: Reactor, Stepper {
     // MARK: - Reactor
     
     enum Action {
-        
+        case submit
+    }
+    
+    enum Mutation {
+        case popVC
     }
     
     struct State {
@@ -31,4 +37,24 @@ class SettingReactor: Reactor, Stepper {
     }
     
     var initialState = State()
+}
+
+extension SettingReactor {
+    func mutate(action: Action) -> Observable<Mutation> {
+        switch action {
+        case .submit:
+            return .just(.popVC)
+        }
+    }
+    
+    func reduce(state: State, mutation: Mutation) -> State {
+        var state = state
+        
+        switch mutation {
+        case .popVC:
+            self.steps.accept(NavigationStep.settingSubmit)
+        }
+        
+        return state
+    }
 }

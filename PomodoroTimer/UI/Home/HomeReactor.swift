@@ -38,6 +38,8 @@ class HomeReactor: Reactor, Stepper {
     }
     
     struct State {
+        var goal: String = ""
+        
         var currentTime: Int = 0
         
         var isRunning: Bool = false

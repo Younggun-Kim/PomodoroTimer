@@ -82,7 +82,12 @@ class SettingViewController: BaseVC, ReactorBased, UIPickerViewDelegate {
 
 extension SettingViewController {
     private func bindAction(reactor: SettingReactor) {
-        
+        self.settingButton
+            .rx
+            .tap
+            .map { SettingReactor.Action.submit }
+            .bind(to: reactor.action)
+            .disposed(by: self.disposeBag)
     }
     
     private func bindState(reactor: SettingReactor) {
@@ -93,6 +98,5 @@ extension SettingViewController {
                 return "\(element) min"
             }
             .disposed(by: disposeBag)
-
     }
 }

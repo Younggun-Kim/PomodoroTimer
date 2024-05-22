@@ -46,6 +46,7 @@
 		DFE8392E2BFDECEF0001CF90 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8392D2BFDECEF0001CF90 /* SettingViewController.swift */; };
 		DFE839302BFDED9E0001CF90 /* SettingReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8392F2BFDED9E0001CF90 /* SettingReactor.swift */; };
 		DFE839322BFE1D240001CF90 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE839312BFE1D240001CF90 /* SettingViewController.xib */; };
+		DFE839352BFE3D430001CF90 /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE839342BFE3D430001CF90 /* RecordModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		DFE8392D2BFDECEF0001CF90 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		DFE8392F2BFDED9E0001CF90 /* SettingReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingReactor.swift; sourceTree = "<group>"; };
 		DFE839312BFE1D240001CF90 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		DFE839342BFE3D430001CF90 /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		DF4FFFED2BF62C15000D361C /* PomodoroTimer */ = {
 			isa = PBXGroup;
 			children = (
+				DFE839332BFE3D0E0001CF90 /* Model */,
 				DFE839212BFC84770001CF90 /* Extensions */,
 				DF50F6FD2BF8F04600DDA1EC /* Application */,
 				DF50F6F62BF8EFBC00DDA1EC /* Flows */,
@@ -253,6 +256,14 @@
 			path = Setting;
 			sourceTree = "<group>";
 		};
+		DFE839332BFE3D0E0001CF90 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DFE839342BFE3D430001CF90 /* RecordModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -350,6 +361,7 @@
 				DF50F6F82BF8EFCE00DDA1EC /* AppFlow.swift in Sources */,
 				DFE839122BFB51320001CF90 /* HistoryReactor.swift in Sources */,
 				DFE839272BFCCD870001CF90 /* UINavigationControllerEx.swift in Sources */,
+				DFE839352BFE3D430001CF90 /* RecordModel.swift in Sources */,
 				DF50F6FA2BF8EFD500DDA1EC /* NavigationStep.swift in Sources */,
 				DFE838D82BFB1D0F0001CF90 /* Storyboarded.swift in Sources */,
 				DFE839232BFC84800001CF90 /* UIApplicationEx.swift in Sources */,
