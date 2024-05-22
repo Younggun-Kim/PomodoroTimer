@@ -27,7 +27,7 @@ class SettingReactor: Reactor, Stepper {
     }
     
     struct State {
-        
+        var minutes = (1...12).map { $0 * 5 }
     }
     
     var initialState = State()

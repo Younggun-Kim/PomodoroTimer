@@ -10,6 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController" customModule="PomodoroTimer" customModuleProvider="target">
             <connections>
+                <outlet property="focusTimeLabel" destination="WbI-MC-pao" id="PBU-ai-mVo"/>
+                <outlet property="goalLabel" destination="x1Y-SG-96d" id="Xr4-TE-AVd"/>
+                <outlet property="goalTextField" destination="Qg6-Yi-k9u" id="nq2-0j-adk"/>
+                <outlet property="minutePickerView" destination="9og-FE-7rD" id="iHP-Yk-hPc"/>
+                <outlet property="settingButton" destination="hJE-hg-FSU" id="p6Z-P6-Cd6"/>
                 <outlet property="view" destination="iN0-l3-epB" id="xDH-8w-VeW"/>
             </connections>
         </placeholder>
@@ -18,18 +23,57 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시간설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdR-Of-M40">
-                    <rect key="frame" x="144.66666666666666" y="408" width="104" height="36"/>
-                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Hg5-cx-aeO">
+                    <rect key="frame" x="20" y="99" width="353" height="679"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="목표를 적어주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1Y-SG-96d">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qg6-Yi-k9u">
+                            <rect key="frame" x="0.0" y="40.333333333333343" width="353" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="8Rd-s2-Eru"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="집중하실 시간을 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbI-MC-pao">
+                            <rect key="frame" x="0.0" y="120.33333333333333" width="353" height="20.333333333333329"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9og-FE-7rD">
+                            <rect key="frame" x="0.0" y="161" width="353" height="160"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="160" id="L3l-0Y-yKJ"/>
+                            </constraints>
+                        </pickerView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Is-5c-m6L" userLabel="Empty">
+                            <rect key="frame" x="0.0" y="340.66666666666674" width="353" height="258.33333333333326"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJE-hg-FSU">
+                            <rect key="frame" x="0.0" y="619" width="353" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="zS8-sp-m4h"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="시간설정"/>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="rdR-Of-M40" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Eei-G7-27D"/>
-                <constraint firstItem="rdR-Of-M40" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="SXB-qS-HhZ"/>
+                <constraint firstItem="Hg5-cx-aeO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="KUs-kE-Kuj"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Hg5-cx-aeO" secondAttribute="trailing" constant="20" id="cMX-Mv-rt6"/>
+                <constraint firstItem="Hg5-cx-aeO" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="oK7-YR-TyA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Hg5-cx-aeO" secondAttribute="bottom" constant="40" id="u7S-DT-hOT"/>
             </constraints>
             <point key="canvasLocation" x="27" y="20"/>
         </view>

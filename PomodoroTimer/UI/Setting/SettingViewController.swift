@@ -13,7 +13,15 @@ import RxSwift
 /**
  시간 설정 화면
  */
-class SettingViewController: BaseVC, ReactorBased {
+class SettingViewController: BaseVC, ReactorBased, UIPickerViewDelegate {
+    
+    // MARK: - IBOutlet
+    @IBOutlet weak var goalLabel: UILabel!
+    @IBOutlet weak var focusTimeLabel: UILabel!
+    @IBOutlet weak var goalTextField: UITextField!
+    @IBOutlet weak var minutePickerView: UIPickerView!
+    @IBOutlet weak var settingButton: UIButton!
+    
     
     // MARK: - ReactorKit
     
@@ -22,6 +30,9 @@ class SettingViewController: BaseVC, ReactorBased {
     typealias Reactor = SettingReactor
     
     func bind(reactor: SettingReactor) {
+        guard self.isInit == true else {
+            return
+        }
         self.bindAction(reactor: reactor)
         self.bindState(reactor: reactor)
     }
@@ -43,11 +54,27 @@ class SettingViewController: BaseVC, ReactorBased {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setConfig()
+        
         if self.isInit == false,
            let reactor = self.reactor {
             self.isInit = true
             self.disposeBag = DisposeBag()
             self.bind(reactor: reactor)
+        }
+    }
+    
+    private func setConfig() {
+        self.goalLabel.do {
+            $0.font = .systemFont(ofSize: 20, weight: .bold)
+        }
+        
+        self.focusTimeLabel.do {
+            $0.font = .systemFont(ofSize: 20, weight: .bold)
+        }
+        
+        self.minutePickerView.do {
+            $0.rx.setDelegate(self).disposed(by: self.disposeBag)
         }
     }
 }
@@ -59,6 +86,13 @@ extension SettingViewController {
     }
     
     private func bindState(reactor: SettingReactor) {
-        
+        reactor
+            .state
+            .map { $0.minutes }
+            .bind(to: minutePickerView.rx.itemTitles) { (row, element) in
+                return "\(element) min"
+            }
+            .disposed(by: disposeBag)
+
     }
 }
