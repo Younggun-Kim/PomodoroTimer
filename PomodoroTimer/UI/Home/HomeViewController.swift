@@ -21,6 +21,7 @@ class HomeViewController: BaseVC, View, StoryboardBased {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var playBtn: UIButton!
     @IBOutlet weak var pauseBtn: UIButton!
+    @IBOutlet weak var goalLabel: UILabel!
     
     // 네비게이션 설정 버튼.
     lazy var settingButton: UIButton = {
@@ -158,6 +159,12 @@ class HomeViewController: BaseVC, View, StoryboardBased {
                 return self?.dateComponentsFormatter.string(from: components)
             }
             .bind(to: timeLabel.rx.text)
+            .disposed(by: self.disposeBag)
+        
+        reactor
+            .state
+            .map { $0.goal }
+            .bind(to: self.goalLabel.rx.text)
             .disposed(by: self.disposeBag)
     }
 }

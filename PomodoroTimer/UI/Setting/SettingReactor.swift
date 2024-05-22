@@ -14,8 +14,8 @@ import RxRelay
 
 class SettingReactor: Reactor, Stepper {
     
-    
-    init() { }
+    init() {
+    }
     
     // MARK: - RxFlow Stepper
     
@@ -26,14 +26,22 @@ class SettingReactor: Reactor, Stepper {
     
     enum Action {
         case submit
+        case inputText(String)
+        case minutePickerSelected(Int)
     }
     
     enum Mutation {
         case popVC
+        case setGoal(String)
+        case updateSelectedMinute(Int)
     }
     
     struct State {
         var minutes = (1...12).map { $0 * 5 }
+        
+        var goal: String = ""
+        
+        var selectedMinute: Int?
     }
     
     var initialState = State()
@@ -44,6 +52,10 @@ extension SettingReactor {
         switch action {
         case .submit:
             return .just(.popVC)
+        case let .inputText(goal):
+            return .just(.setGoal(goal))
+        case let .minutePickerSelected(minute):
+            return .just(.updateSelectedMinute(minute))
         }
     }
     
@@ -52,7 +64,16 @@ extension SettingReactor {
         
         switch mutation {
         case .popVC:
-            self.steps.accept(NavigationStep.settingSubmit)
+            if let selectedMinute = state.selectedMinute {
+                let record = RecordModel(goal: state.goal, minute: selectedMinute)
+                self.steps.accept(NavigationStep.settingSubmit(record))
+            } else {
+                // 알럿 띄워야 함.
+            }
+        case let .setGoal(goal):
+            state.goal = goal
+        case let .updateSelectedMinute(minute):
+            state.selectedMinute = minute
         }
         
         return state

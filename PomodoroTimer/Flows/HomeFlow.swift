@@ -40,17 +40,17 @@ class HomeFlow: Flow {
         switch step {
         case .homeIsRequired:
             return self.navigationToHome()
-        case .setting:
+        case .moveSetting:
             return self.navigationToSetting()
-        case .settingSubmit:
-            return self.popToSettingViewController()
+        case let .settingSubmit(record):
+            return self.popToSettingViewController(sendData: record)
         default:
             return .none
         }
     }
     
     func navigationToHome() -> FlowContributors {
-        let reactor = HomeReactor()
+        let reactor = HomeReactor(recordRelay: self.settingDataResponseRelay)
         let vc = HomeViewController.instantiate(withReactor: reactor)
         self.rootViewController.pushViewController(vc, animated: true)
         return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vc.reactor!))
@@ -69,7 +69,8 @@ class HomeFlow: Flow {
         )
     }
     
-    func popToSettingViewController() -> FlowContributors {
+    func popToSettingViewController(sendData data: RecordModel) -> FlowContributors {
+        self.settingDataResponseRelay.accept(data)
         self.rootViewController.popViewController(animated: true)
         return .none
     }

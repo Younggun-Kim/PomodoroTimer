@@ -44,10 +44,17 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sr2-RV-XfD">
+                                <rect key="frame" x="20" y="546.33333333333337" width="353" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sr2-RV-XfD" secondAttribute="trailing" constant="20" id="2vj-fs-PKG"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="m0L-Pc-Lh2" secondAttribute="trailing" constant="20" id="7bG-EX-722"/>
                             <constraint firstItem="0nL-WB-Ucg" firstAttribute="width" secondItem="0nL-WB-Ucg" secondAttribute="height" id="8DF-KA-2Sk"/>
                             <constraint firstItem="m0L-Pc-Lh2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="C9H-HB-oSn"/>
@@ -57,11 +64,14 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0nL-WB-Ucg" secondAttribute="trailing" constant="20" id="Ts6-nM-jUo"/>
                             <constraint firstItem="0FJ-1K-h5O" firstAttribute="centerY" secondItem="0nL-WB-Ucg" secondAttribute="centerY" id="XAc-pt-hyP"/>
                             <constraint firstItem="0nL-WB-Ucg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="fcc-fj-Ke0"/>
+                            <constraint firstItem="sr2-RV-XfD" firstAttribute="top" secondItem="m0L-Pc-Lh2" secondAttribute="bottom" constant="40" id="jbo-Hf-bnr"/>
+                            <constraint firstItem="sr2-RV-XfD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="l6l-M8-517"/>
                             <constraint firstItem="0FJ-1K-h5O" firstAttribute="centerX" secondItem="0nL-WB-Ucg" secondAttribute="centerX" id="zbr-uF-DbZ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="circularSlider" destination="0nL-WB-Ucg" id="Ddk-l8-Cqf"/>
+                        <outlet property="goalLabel" destination="sr2-RV-XfD" id="oqT-ZX-NYG"/>
                         <outlet property="pauseBtn" destination="Xac-EV-56z" id="RXN-XR-NJu"/>
                         <outlet property="playBtn" destination="bSv-2P-qH0" id="oce-lX-Qdc"/>
                         <outlet property="timeLabel" destination="0FJ-1K-h5O" id="k81-FO-BPq"/>
@@ -69,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6" y="-2"/>
+            <point key="canvasLocation" x="5.343511450381679" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>

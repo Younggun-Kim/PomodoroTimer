@@ -8,6 +8,8 @@
 import UIKit
 import ReactorKit
 import RxSwift
+import RxCocoa
+import RxDataSources
 
 
 /**
@@ -88,15 +90,37 @@ extension SettingViewController {
             .map { SettingReactor.Action.submit }
             .bind(to: reactor.action)
             .disposed(by: self.disposeBag)
+        
+        self.goalTextField
+            .rx
+            .text
+            .compactMap { $0 }
+            .map { SettingReactor.Action.inputText($0) }
+            .bind(to: reactor.action)
+            .disposed(by: self.disposeBag)
+        
+        self.minutePickerView
+            .rx
+            .itemSelected
+            .map { (row, component) in SettingReactor.Action.minutePickerSelected(component) }
+            .bind(to: reactor.action)
+            .disposed(by: self.disposeBag)
     }
     
     private func bindState(reactor: SettingReactor) {
-        reactor
-            .state
+        let state = reactor.state
+        
+        state
             .map { $0.minutes }
             .bind(to: minutePickerView.rx.itemTitles) { (row, element) in
                 return "\(element) min"
             }
             .disposed(by: disposeBag)
+        
+        state
+            .map { $0.goal }
+            .bind(to: self.goalTextField.rx.text)
+            .disposed(by: self.disposeBag)
+        
     }
 }

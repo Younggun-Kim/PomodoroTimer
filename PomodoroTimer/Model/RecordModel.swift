@@ -9,7 +9,7 @@ import Foundation
 
 
 // 포모도로 기록 모델.
-struct RecordModel {
+struct RecordModel: Equatable {
     var goal: String
     var minute: Int
 }

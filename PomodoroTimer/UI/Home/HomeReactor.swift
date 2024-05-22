@@ -13,6 +13,21 @@ import ReactorKit
 
 class HomeReactor: Reactor, Stepper {
     
+    var disposeBag = DisposeBag()
+    var recordRelay: PublishRelay<RecordModel>
+    
+    init(recordRelay: PublishRelay<RecordModel>) {
+        self.recordRelay = recordRelay
+        
+        self.recordRelay
+            .map { Action.receiveRecordData($0)}
+            .bind(to: action)
+            .disposed(by: self.disposeBag)
+    }
+    
+    deinit {
+    }
+    
     // MARK: Stepper
     
     let steps = PublishRelay<Step>()
@@ -25,16 +40,18 @@ class HomeReactor: Reactor, Stepper {
     
     // MARK: Reactor
     
-    enum Action {
+    enum Action: Equatable {
         case play
         case pause
         case setting
+        case receiveRecordData(RecordModel)
     }
     
     enum Mutation {
         case setTime(Int)
         case setRunning(Bool)
         case moveSetting
+        case setData(RecordModel)
     }
     
     struct State {
@@ -60,6 +77,8 @@ class HomeReactor: Reactor, Stepper {
             return Observable.just(Mutation.setRunning(false))
         case .setting:
             return Observable.just(Mutation.moveSetting)
+        case let .receiveRecordData(data):
+            return .just(.setData(data))
         }
     }
     
@@ -72,7 +91,12 @@ class HomeReactor: Reactor, Stepper {
         case let .setRunning(isRunning):
             state.isRunning = isRunning
         case .moveSetting:
-            self.steps.accept(NavigationStep.setting)
+            self.steps.accept(NavigationStep.moveSetting)
+        case let .setData(data):
+            state.goal = data.goal
+            
+            // TODO: - 이거 시간 설정 코드 바꿔야함.
+            state.currentTime = data.minute
         }
         
         return state

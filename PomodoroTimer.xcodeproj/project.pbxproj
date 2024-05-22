@@ -46,6 +46,8 @@
 		DFE839392BFE508F0001CF90 /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE839382BFE508F0001CF90 /* SettingViewController.storyboard */; };
 		DFE8393B2BFE50BE0001CF90 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE8393A2BFE50BE0001CF90 /* HomeViewController.storyboard */; };
 		DFE8393D2BFE51060001CF90 /* HistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE8393C2BFE51060001CF90 /* HistoryViewController.storyboard */; };
+		DFE839402BFE58B00001CF90 /* Differentiator in Frameworks */ = {isa = PBXBuildFile; productRef = DFE8393F2BFE58B00001CF90 /* Differentiator */; };
+		DFE839422BFE58B00001CF90 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = DFE839412BFE58B00001CF90 /* RxDataSources */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,7 +95,9 @@
 				DF4F00082BF62C50000D361C /* RxSwift in Frameworks */,
 				DF50F7172BF9FCA100DDA1EC /* Swinject in Frameworks */,
 				DF50F7142BF9F49700DDA1EC /* Reusable in Frameworks */,
+				DFE839422BFE58B00001CF90 /* RxDataSources in Frameworks */,
 				DF4F00062BF62C50000D361C /* RxRelay in Frameworks */,
+				DFE839402BFE58B00001CF90 /* Differentiator in Frameworks */,
 				DF4F000B2BF62C5C000D361C /* ReactorKit in Frameworks */,
 				DF4F00042BF62C50000D361C /* RxCocoa in Frameworks */,
 				DFE8391D2BFB988C0001CF90 /* HGCircularSlider in Frameworks */,
@@ -287,6 +291,8 @@
 				DF50F7162BF9FCA100DDA1EC /* Swinject */,
 				DFE8391C2BFB988C0001CF90 /* HGCircularSlider */,
 				DFE8391F2BFB99950001CF90 /* Then */,
+				DFE8393F2BFE58B00001CF90 /* Differentiator */,
+				DFE839412BFE58B00001CF90 /* RxDataSources */,
 			);
 			productName = PomodoroTimer;
 			productReference = DF4FFFEB2BF62C15000D361C /* PomodoroTimer.app */;
@@ -324,6 +330,7 @@
 				DF50F7152BF9FCA100DDA1EC /* XCRemoteSwiftPackageReference "Swinject" */,
 				DFE8391B2BFB988C0001CF90 /* XCRemoteSwiftPackageReference "HGCircularSlider" */,
 				DFE8391E2BFB99950001CF90 /* XCRemoteSwiftPackageReference "Then" */,
+				DFE8393E2BFE58B00001CF90 /* XCRemoteSwiftPackageReference "RxDataSources" */,
 			);
 			productRefGroup = DF4FFFEC2BF62C15000D361C /* Products */;
 			projectDirPath = "";
@@ -658,6 +665,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		DFE8393E2BFE58B00001CF90 /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -705,6 +720,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DFE8391E2BFB99950001CF90 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		DFE8393F2BFE58B00001CF90 /* Differentiator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DFE8393E2BFE58B00001CF90 /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = Differentiator;
+		};
+		DFE839412BFE58B00001CF90 /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DFE8393E2BFE58B00001CF90 /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

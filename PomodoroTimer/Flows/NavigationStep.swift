@@ -7,6 +7,7 @@
 
 import Foundation
 import RxFlow
+import RxRelay
 
 
 enum NavigationStep: Step {
@@ -18,8 +19,8 @@ enum NavigationStep: Step {
     
     // Home
     case homeIsRequired
-    case setting
-    case settingSubmit
+    case moveSetting
+    case settingSubmit(RecordModel)
     
     // History
     case historyIsRequired
