@@ -77,8 +77,9 @@ class HomeViewController: BaseVC, View, StoryboardBased {
     
     private func setConfig() {
         self.circularSlider.do {
+            // 60분 * 60초
+            $0.maximumValue = 60.0 * 60.0
             $0.minimumValue = 0.0
-            $0.maximumValue = 60.0
             $0.endPointValue = 30
             $0.diskFillColor = .red
             $0.diskColor = .white

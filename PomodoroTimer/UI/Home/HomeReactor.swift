@@ -94,9 +94,7 @@ class HomeReactor: Reactor, Stepper {
             self.steps.accept(NavigationStep.moveSetting)
         case let .setData(data):
             state.goal = data.goal
-            
-            // TODO: - 이거 시간 설정 코드 바꿔야함.
-            state.currentTime = data.minute
+            state.currentTime = data.minute * 60
         }
         
         return state
@@ -105,7 +103,7 @@ class HomeReactor: Reactor, Stepper {
     private func startTimer() -> Observable<Mutation> {
         return Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance)
             .take(until: self.action.filter({ $0 == .pause }))
-            .take(while: { _ in self.currentState.currentTime < 5})
-            .map { _ in Mutation.setTime(self.currentState.currentTime + 1)}
+            .take(while: { _ in self.currentState.currentTime > 1})
+            .map { _ in Mutation.setTime(self.currentState.currentTime - 1)}
     }
 }

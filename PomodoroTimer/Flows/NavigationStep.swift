@@ -24,4 +24,7 @@ enum NavigationStep: Step {
     
     // History
     case historyIsRequired
+    
+    // Alert
+    case showAlert
 }

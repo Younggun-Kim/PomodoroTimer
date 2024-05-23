@@ -78,11 +78,10 @@ extension SettingReactor {
                 let minute = state.minutes[state.selectedMinuteIndex]
                 let record = RecordModel(goal: state.goal, minute: minute)
                 self.steps.accept(NavigationStep.settingSubmit(record))
-            } else {
-                // 알럿 띄워야 함.
             }
         case .setSubmitEnabled:
-            state.isEnabledSubmit = state.goal.count > 2
+            // TODO: - 이벤트 처리가 한 박자씩 느리넹
+            state.isEnabledSubmit = state.goal.count >= 2
         }
         
         return state
