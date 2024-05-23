@@ -21,6 +21,8 @@ enum NavigationStep: Step {
     case homeIsRequired
     case moveSetting
     case settingSubmit(RecordModel)
+    case showRetrospect
+    case dismissRetrospect
     
     // History
     case historyIsRequired

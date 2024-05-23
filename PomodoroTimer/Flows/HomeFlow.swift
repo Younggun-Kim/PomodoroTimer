@@ -44,6 +44,10 @@ class HomeFlow: Flow {
             return self.navigationToSetting()
         case let .settingSubmit(record):
             return self.popToSettingViewController(sendData: record)
+        case .showRetrospect:
+            return self.presentToRetrospect()
+        case .dismissRetrospect:
+            return self.dismissToRetrospect()
         default:
             return .none
         }
@@ -69,9 +73,28 @@ class HomeFlow: Flow {
         )
     }
     
+    // TODO: Pop을 vc를 찾아서 하는 걸로 바꾸는게 좋겠지?? 메이비?
     func popToSettingViewController(sendData data: RecordModel) -> FlowContributors {
         self.settingDataResponseRelay.accept(data)
         self.rootViewController.popViewController(animated: true)
+        return .none
+    }
+    
+    func presentToRetrospect() -> FlowContributors {
+        let reactor = RetrospectReactor()
+        let vc = RetrospectViewController.instantiate(withReactor: reactor)
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        self.rootViewController.present(vc, animated: true)
+        
+        return .one(flowContributor: .contribute(
+            withNextPresentable: vc,
+            withNextStepper: vc.reactor!)
+        )
+    }
+    
+    func dismissToRetrospect() -> FlowContributors {
+        self.rootViewController.dismiss(animated: true)
         return .none
     }
 }
