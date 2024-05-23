@@ -83,7 +83,8 @@ class HomeFlow: Flow {
     func presentToRetrospect() -> FlowContributors {
         let reactor = RetrospectReactor()
         let vc = RetrospectViewController.instantiate(withReactor: reactor)
-        vc.modalPresentationStyle = .fullScreen
+        
+        vc.modalPresentationStyle = .overFullScreen
         vc.modalTransitionStyle = .crossDissolve
         self.rootViewController.present(vc, animated: true)
         

@@ -95,7 +95,7 @@ class HomeReactor: Reactor, Stepper {
             self.steps.accept(NavigationStep.moveSetting)
         case let .setData(data):
             state.goal = data.goal
-//            state.currentTime = data.minute * 60
+            //            state.currentTime = data.minute * 60
             state.currentTime = data.minute
         case .showRetrospectPopup:
             self.steps.accept(NavigationStep.showRetrospect)
@@ -110,16 +110,18 @@ class HomeReactor: Reactor, Stepper {
             .take(until: self.action.filter({ $0 == .pause }))
             .take(while: { _ in self.currentState.currentTime > 0})
             .flatMap { _ -> Observable<Mutation> in
-                        let newTime = self.currentState.currentTime - 1
-                        if newTime == 0 {
-                            return Observable.concat([
-                                .just(.setTime(newTime)),
-                                .just(.showRetrospectPopup)
-                            ])
-                        } else {
-                            return .just(.setTime(newTime))
-                        }
-                    }
-
+                let newTime = self.currentState.currentTime - 1
+                if newTime == 0 {
+                    
+                    // TODO: CoreData 생성을 여기서 해야하나..? 그러면 팝업에 id를 넘겨줘서 저장한 걸 수정해아 할 것 같은데
+                    return Observable.concat([
+                        .just(.setTime(newTime)),
+                        .just(.showRetrospectPopup)
+                    ])
+                } else {
+                    return .just(.setTime(newTime))
+                }
+            }
+        
     }
 }

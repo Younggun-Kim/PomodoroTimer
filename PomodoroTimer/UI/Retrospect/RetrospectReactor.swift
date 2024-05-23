@@ -26,16 +26,24 @@ class RetrospectReactor: Reactor, Stepper {
     
     enum Action {
         case onTapClose
-        
+        case onTapRating(Bool)
+        case onTapSubmit
+        case onInputDescription(String?)
     }
     
     enum Mutation {
         case dismissPopup
-        
+        case setRating(Bool)
+        case setEnabledSubmit
+        case setDescription(String?)
     }
     
     struct State {
+        var rating: Bool? = nil
         
+        var isEnabedSubmit = false
+        
+        var description: String?
     }
     
     var initialState = State()
@@ -48,6 +56,17 @@ extension RetrospectReactor {
         switch action {
         case .onTapClose:
             return .just(.dismissPopup)
+        case let .onTapRating(isGood):
+            return Observable.concat([
+                .just(.setRating(isGood)),
+                .just(.setEnabledSubmit),
+            ])
+        case .onTapSubmit:
+            // TODO: - 여기서 coreData저장이 되야함.
+            return .just(.dismissPopup)
+        case let .onInputDescription(description):
+            return .just(.setDescription(description))
+            
         }
     }
     
@@ -57,6 +76,12 @@ extension RetrospectReactor {
         switch mutation {
         case .dismissPopup:
             self.steps.accept(NavigationStep.dismissRetrospect)
+        case let .setRating(isGood):
+            state.rating = isGood
+        case .setEnabledSubmit:
+            state.isEnabedSubmit = state.rating != nil
+        case let .setDescription(description):
+            state.description = description
         }
         
         return state
