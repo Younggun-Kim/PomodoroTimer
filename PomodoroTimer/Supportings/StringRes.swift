@@ -13,4 +13,6 @@ struct StringRes {
     static let AppName = "뽀모도로"
     
     static let TimerHistory = "타임기록"
+    
+    static let enterLeastTwoCharaters = "2글자 이상 입력해주세요."
 }

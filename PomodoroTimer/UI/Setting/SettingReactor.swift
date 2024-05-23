@@ -25,23 +25,26 @@ class SettingReactor: Reactor, Stepper {
     // MARK: - Reactor
     
     enum Action {
-        case submit
         case inputText(String)
         case minutePickerSelected(Int)
+        case submit
     }
     
     enum Mutation {
-        case popVC
         case setGoal(String)
-        case updateSelectedMinute(Int)
+        case setSelectedMinuteIndex(Int)
+        case popVC
+        case setSubmitEnabled
     }
     
     struct State {
-        var minutes = (1...12).map { $0 * 5 }
+        var minutes = Array(stride(from: 5, to: 61, by: 5))
+
+        var selectedMinuteIndex = 0
         
         var goal: String = ""
         
-        var selectedMinute: Int?
+        var isEnabledSubmit = false
     }
     
     var initialState = State()
@@ -50,12 +53,15 @@ class SettingReactor: Reactor, Stepper {
 extension SettingReactor {
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
+        case let .inputText(goal):
+            return Observable.concat([
+                .just(.setSubmitEnabled),
+                .just(.setGoal(goal)),
+            ])
+        case let .minutePickerSelected(row):
+            return .just(.setSelectedMinuteIndex(row))
         case .submit:
             return .just(.popVC)
-        case let .inputText(goal):
-            return .just(.setGoal(goal))
-        case let .minutePickerSelected(minute):
-            return .just(.updateSelectedMinute(minute))
         }
     }
     
@@ -63,17 +69,20 @@ extension SettingReactor {
         var state = state
         
         switch mutation {
+        case let .setGoal(goal):
+            state.goal = goal
+        case let .setSelectedMinuteIndex(row):
+            state.selectedMinuteIndex = row
         case .popVC:
-            if let selectedMinute = state.selectedMinute {
-                let record = RecordModel(goal: state.goal, minute: selectedMinute)
+            if state.isEnabledSubmit {
+                let minute = state.minutes[state.selectedMinuteIndex]
+                let record = RecordModel(goal: state.goal, minute: minute)
                 self.steps.accept(NavigationStep.settingSubmit(record))
             } else {
                 // 알럿 띄워야 함.
             }
-        case let .setGoal(goal):
-            state.goal = goal
-        case let .updateSelectedMinute(minute):
-            state.selectedMinute = minute
+        case .setSubmitEnabled:
+            state.isEnabledSubmit = state.goal.count > 2
         }
         
         return state

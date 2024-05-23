@@ -74,7 +74,7 @@
                         <outlet property="goalLabel" destination="xiY-i1-RbI" id="lA8-OJ-633"/>
                         <outlet property="goalTextField" destination="LHt-iP-C8r" id="gae-xp-pLN"/>
                         <outlet property="minutePickerView" destination="Ibo-1r-zsf" id="kk6-xK-Ruj"/>
-                        <outlet property="settingButton" destination="Aou-4T-nQE" id="xJ4-eg-lsL"/>
+                        <outlet property="submitButton" destination="Aou-4T-nQE" id="r33-yQ-SKS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

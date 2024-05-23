@@ -22,7 +22,7 @@ class SettingViewController: BaseVC, View, UIPickerViewDelegate {
     @IBOutlet weak var focusTimeLabel: UILabel!
     @IBOutlet weak var goalTextField: UITextField!
     @IBOutlet weak var minutePickerView: UIPickerView!
-    @IBOutlet weak var settingButton: UIButton!
+    @IBOutlet weak var submitButton: UIButton!
     
     
     // MARK: - ReactorKit
@@ -75,6 +75,9 @@ class SettingViewController: BaseVC, View, UIPickerViewDelegate {
             $0.font = .systemFont(ofSize: 20, weight: .bold)
         }
         
+        self.goalTextField.do {
+            $0.placeholder = StringRes.enterLeastTwoCharaters
+        }
         self.minutePickerView.do {
             $0.rx.setDelegate(self).disposed(by: self.disposeBag)
         }
@@ -84,7 +87,7 @@ class SettingViewController: BaseVC, View, UIPickerViewDelegate {
 
 extension SettingViewController {
     private func bindAction(reactor: SettingReactor) {
-        self.settingButton
+        self.submitButton
             .rx
             .tap
             .map { SettingReactor.Action.submit }
@@ -99,10 +102,12 @@ extension SettingViewController {
             .bind(to: reactor.action)
             .disposed(by: self.disposeBag)
         
+        // PickerView 선택 이벤트
         self.minutePickerView
             .rx
             .itemSelected
-            .map { (row, component) in SettingReactor.Action.minutePickerSelected(component) }
+            .debug()
+            .map { (row, component) in SettingReactor.Action.minutePickerSelected(row) }
             .bind(to: reactor.action)
             .disposed(by: self.disposeBag)
     }
@@ -122,5 +127,9 @@ extension SettingViewController {
             .bind(to: self.goalTextField.rx.text)
             .disposed(by: self.disposeBag)
         
+        state
+            .map { $0.isEnabledSubmit }
+            .bind(to: self.submitButton.rx.isEnabled)
+            .disposed(by: self.disposeBag)
     }
 }

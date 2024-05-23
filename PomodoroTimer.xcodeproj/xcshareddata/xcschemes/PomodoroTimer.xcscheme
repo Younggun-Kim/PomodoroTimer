@@ -55,6 +55,10 @@
             argument = "IDEPreferLogStreaming=YES"
             isEnabled = "YES">
          </CommandLineArgument>
+         <CommandLineArgument
+            argument = "CG_NUMERICS_SHOW_BACKTRACE=YES"
+            isEnabled = "YES">
+         </CommandLineArgument>
       </CommandLineArguments>
    </LaunchAction>
    <ProfileAction
